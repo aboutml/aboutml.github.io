@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --x: 5vw;
+    --font-size: 18px;
+    --l-h: 1.6;
+    --font: "Manrope",-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI",Roboto,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",Raleway,helvetica neue,helvetica,arial,tahoma,sans-serif;
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    background: #fff;
+    color: #000;
+    height: 100%;
+    font-size: var(--font-size);
+    line-height: 1.6;
+    line-height: var(--l-h);
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-family: var(--font);
+    overflow-x: hidden;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color .4s;
+}
+
+div {
+    display: block;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+.content-wrap {
+    padding: 0 var(--x);
+}
+
+.chat-block {
+    min-height: 48px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.chat-block_profile {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    /* line-height: 0; */
+    overflow: hidden;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.chat-block_content {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 24px;
+    background: #f4f4f4;
+}
+
+.chat-block.your-message {
+    justify-content: flex-end;
+}
+
+.your-message .chat-block_content {
+    background: #fff;
+    box-shadow: inset 0 0 0 1px rgb(0 0 50 / 15%);
+}
+
+
+.chat-block.your-message .chat-block_profile {
+    order: 2;
+    margin-right: 0;
+    margin-left: 10px;
+    background: var(--dark-blue);
+    color: #fff;
+}
+
+.chat-block.your-message .chat-block_profile.no-bg {
+    background: transparent;
+}
